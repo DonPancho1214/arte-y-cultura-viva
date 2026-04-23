@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    if (localStorage.getItem('tema_acv') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explora los programas de formación artística gratuita de la Fundación Arte y Cultura Viva: danza, música, teatro y artes visuales en Bogotá."/>
+  <title>Programas — Fundación Arte y Cultura Viva</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link rel="stylesheet" href="../css/accesibilidad.css"/>
+  <style>
+    .filtros { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-bottom:2.5rem; }
+    .filtro-btn { padding:.45rem 1.1rem; border-radius:30px; border:2px solid var(--arena-300); background:transparent; font-size:.85rem; font-weight:700; color:var(--cafe); cursor:pointer; transition:all .2s; font-family:var(--fuente-cuerpo); }
+    .filtro-btn:hover, .filtro-btn.activo { border-color:var(--naranja); background:var(--naranja-pale); color:var(--naranja); }
+    .prog-detail { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .paso-num { width:36px; height:36px; border-radius:50%; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; }
+    @media(max-width:768px){ .prog-detail { grid-template-columns:1fr; } }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Programas — Fundación Arte y Cultura Viva" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<main id="contenido-principal">
+
+  <!-- HERO -->
+  <section class="pagina-hero">
+    <div class="deco-forma forma-blob-1 bg-deco-naranja deco-tl-small" aria-hidden="true" style="opacity:0.2"></div>
+    <div class="deco-forma forma-pill bg-deco-verde deco-br-tall" aria-hidden="true" style="opacity:0.2; right:5%; bottom:-20px"></div>
+    <div class="contenedor">
+      <span class="etiqueta">Lo que hacemos</span>
+      <h1>Programas y proyectos</h1>
+      <p class="desc">Ofrecemos formación artística gratuita en cuatro disciplinas con instructores certificados, materiales incluidos y certificado de participación. Abierto a toda la comunidad.</p>
+    </div>
+  </section>
+
+  <!-- GRILLA DE PROGRAMAS -->
+  <section class="seccion seccion-crema">
+    <div class="deco-forma forma-blob-2 bg-deco-naranja deco-tr-large" aria-hidden="true" style="opacity:0.25; top:-50px"></div>
+    <div class="deco-forma forma-blob-1 bg-deco-morado deco-ml-medium" aria-hidden="true" style="opacity:0.2"></div>
+    <div class="contenedor">
+      <div class="sec-encabezado reveal">
+        <span class="etiqueta">Nuestros programas</span>
+        <h2>Formación artística para todos</h2>
+        <p>Filtra por disciplina y encuentra el programa que más te interesa. Todos son gratuitos y abiertos a la comunidad.</p>
+      </div>
+      <div class="filtros">
+        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="artes-visuales">Artes visuales</button>
+        <button class="filtro-btn" data-filtro="musica">Música</button>
+        <button class="filtro-btn" data-filtro="danza">Danza</button>
+        <button class="filtro-btn" data-filtro="teatro">Teatro</button>
+        <button class="filtro-btn" data-filtro="comunidad">Comunidad</button>
+      </div>
+      <div class="programas-grid">
+        <article class="programa-card reveal" data-categoria="artes-visuales">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#6a3010,#4a2008)">Artes visuales</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-naranja">Artes visuales</span>
+            <h3>Taller de pintura y escultura</h3>
+            <p>Formación integral en pintura al óleo, acuarela, acrílico, técnicas mixtas y escultura con barro y materiales reciclados. Cupos para niños desde 8 años, jóvenes y adultos.</p>
+            <p style="font-size:.84rem"><strong>Horario:</strong> Martes y jueves 4–6pm &nbsp;·&nbsp; <strong>Edad:</strong> +8 años &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Sede Norte · 2025</span><a href="contacto.html" class="enlace-mas">Inscribirme</a></div>
+        </article>
+        <article class="programa-card reveal" style="transition-delay:.1s" data-categoria="artes-visuales">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#5a2010,#3a1008)">Diseño gráfico</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-naranja">Artes visuales</span>
+            <h3>Diseño gráfico y arte digital</h3>
+            <p>Introducción al diseño gráfico, fotografía digital y edición de imágenes. Aprende a expresarte a través de medios digitales. Contamos con equipos de cómputo disponibles.</p>
+            <p style="font-size:.84rem"><strong>Horario:</strong> Miércoles 2–5pm &nbsp;·&nbsp; <strong>Edad:</strong> +14 años &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Sede Centro · 2025</span><a href="contacto.html" class="enlace-mas">Inscribirme</a></div>
+        </article>
+        <article class="programa-card reveal" style="transition-delay:.1s" data-categoria="musica">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#2a5010,#1a3008)">Música</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-verde">Música</span>
+            <h3>Escuela de música comunitaria</h3>
+            <p>Aprende guitarra, percusión, viento y canto coral con instructores certificados del Conservatorio. Clases grupales e individuales. No se requiere experiencia previa.</p>
+            <p style="font-size:.84rem"><strong>Horario:</strong> Lun, mié, vie 3–5pm &nbsp;·&nbsp; <strong>Edad:</strong> +6 años &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Sede Sur · 2025</span><a href="contacto.html" class="enlace-mas">Inscribirme</a></div>
+        </article>
+        <article class="programa-card reveal" style="transition-delay:.2s" data-categoria="danza">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#4a1060,#2a0840)">Danza</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-morado">Danza</span>
+            <h3>Danza folclórica colombiana</h3>
+            <p>Cumbia, mapalé, bambuco, joropo y danzas regionales de Colombia. Clases con vestuario incluido. Participación en festivales y eventos culturales de la ciudad.</p>
+            <p style="font-size:.84rem"><strong>Horario:</strong> Sábados 10–12pm &nbsp;·&nbsp; <strong>Edad:</strong> +5 años &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Sede Norte · 2025</span><a href="contacto.html" class="enlace-mas">Inscribirme</a></div>
+        </article>
+        <article class="programa-card reveal" style="transition-delay:.3s" data-categoria="teatro">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#1a3060,#0a1840)">Teatro</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-azul">Teatro</span>
+            <h3>Taller de teatro y expresión corporal</h3>
+            <p>Técnicas de actuación, expresión corporal, voz y oratoria. Presentaciones públicas al finalizar cada semestre. Forma tu confianza y habilidades comunicativas a través del teatro.</p>
+            <p style="font-size:.84rem"><strong>Horario:</strong> Viernes 5–7pm &nbsp;·&nbsp; <strong>Edad:</strong> +10 años &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Sede Centro · 2025</span><a href="contacto.html" class="enlace-mas">Inscribirme</a></div>
+        </article>
+        <article class="programa-card reveal" style="transition-delay:.4s" data-categoria="comunidad">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#6a1a10,#4a1008)">Arte urbano</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-rojo">Proyectos especiales</span>
+            <h3>Arte en los barrios — murales comunitarios</h3>
+            <p>Proyecto itinerante de intervención artística urbana. Diseñamos y pintamos murales en espacios públicos junto con la comunidad, convirtiendo paredes en lienzos de esperanza.</p>
+            <p style="font-size:.84rem"><strong>Modalidad:</strong> Itinerante &nbsp;·&nbsp; <strong>Edad:</strong> Todas &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Bogotá · 2025</span><a href="contacto.html" class="enlace-mas">Ver convocatoria</a></div>
+        </article>
+        <article class="programa-card reveal" style="transition-delay:.5s" data-categoria="comunidad">
+          <div class="programa-card-img"><div class="img-ph" style="background:linear-gradient(135deg,#3a5a10,#2a4008)">Adultos mayores</div></div>
+          <div class="programa-card-body">
+            <span class="prog-cat prog-cat-verde">Adultos mayores</span>
+            <h3>Arte sin límites — adulto mayor</h3>
+            <p>Programa especial diseñado para personas mayores de 60 años. Actividades artísticas adaptadas que estimulan la creatividad, la memoria y el bienestar integral.</p>
+            <p style="font-size:.84rem"><strong>Horario:</strong> Mié y vie 9–11am &nbsp;·&nbsp; <strong>Edad:</strong> 60+ &nbsp;·&nbsp; <strong>Costo:</strong> Gratuito</p>
+          </div>
+          <div class="programa-footer"><span>Sede Sur · 2025</span><a href="contacto.html" class="enlace-mas">Inscribirme</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO INSCRIBIRSE -->
+  <section class="seccion seccion-clara">
+    <div class="deco-forma forma-blob-1 bg-deco-verde deco-bl-large" aria-hidden="true" style="opacity:0.2; bottom:-100px; left:-50px"></div>
+    <div class="deco-forma forma-pill bg-deco-rojo deco-tc-pill" aria-hidden="true" style="opacity:0.25; transform:rotate(-35deg)"></div>
+    <div class="contenedor">
+      <div class="prog-detail">
+        <div class="reveal">
+          <span class="etiqueta">¿Cómo participar?</span>
+          <h2>Proceso de inscripción sencillo</h2>
+          <p>Todos nuestros programas son gratuitos y están abiertos a cualquier persona de la comunidad. No se requiere experiencia artística previa. Los cupos son limitados.</p>
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem">
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div class="paso-num" style="background:var(--naranja)">1</div>
+              <div><h4 style="font-size:1rem;margin-bottom:.2rem">Elige tu programa</h4><p style="font-size:.88rem">Revisa los programas disponibles y elige el que más te interese o el que se ajuste a tu horario y edad.</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div class="paso-num" style="background:var(--verde)">2</div>
+              <div><h4 style="font-size:1rem;margin-bottom:.2rem">Contáctanos</h4><p style="font-size:.88rem">Escríbenos por correo o WhatsApp, o visita directamente la sede más cercana. Te orientaremos sobre disponibilidad de cupos.</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div class="paso-num" style="background:var(--morado)">3</div>
+              <div><h4 style="font-size:1rem;margin-bottom:.2rem">Diligencia el formulario</h4><p style="font-size:.88rem">Completa el formulario de inscripción con tus datos básicos y los del programa elegido. Para menores de edad, debe firmarlo un acudiente.</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <div class="paso-num" style="background:var(--azul)">4</div>
+              <div><h4 style="font-size:1rem;margin-bottom:.2rem">¡Empieza a crear!</h4><p style="font-size:.88rem">Recibirás confirmación por correo con el horario, sede y materiales que debes llevar. Bienvenido a la familia Arte y Cultura Viva.</p></div>
+            </div>
+          </div>
+          <a href="contacto.html" class="btn btn-primario" style="margin-top:1.8rem">Contactarnos para inscripción</a>
+        </div>
+        <div class="reveal" style="transition-delay:.15s">
+          <div style="aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden">
+            <div class="img-ph" style="height:100%;background:linear-gradient(135deg,#4a3010,#2a1808)">Imagen inscripción</div>
+          </div>
+          <!-- Nota informativa -->
+          <div style="background:var(--naranja-pale);border-radius:var(--r-md);padding:1.3rem;border-left:4px solid var(--naranja);margin-top:1.5rem">
+            <p style="font-size:.87rem;margin:0;color:var(--cafe)">
+              <strong>Información importante:</strong> Los cupos son limitados por programa. Inscríbete con tiempo para asegurar tu lugar. Los niños menores de 10 años deben ir acompañados por un adulto en la primera sesión.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="../js/nav-footer.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/accesibilidad.js"></script>
+<script>
+document.querySelectorAll('.filtro-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filtro-btn').forEach(function(b){b.classList.remove('activo')});
+    btn.classList.add('activo');
+    var filtro = btn.getAttribute('data-filtro');
+    document.querySelectorAll('.programa-card').forEach(function(card){
+      if(filtro === 'todos' || card.getAttribute('data-categoria') === filtro) {
+        card.style.display = '';
+        card.style.opacity = '1';
+      } else {
+        card.style.display = 'none';
+        card.style.opacity = '0';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
