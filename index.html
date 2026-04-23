@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <script>
+    if (localStorage.getItem('tema_acv') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Fundación Arte y Cultura Viva — Centro de formación artística que promueve el arte y la cultura como herramientas de transformación social en Colombia." />
+  <meta property="og:title" content="Fundación Arte y Cultura Viva" />
+  <meta property="og:description" content="Arte y cultura como motores de transformación social en Colombia." />
+  <meta property="og:type" content="website" />
+  <title>Inicio — Fundación Arte y Cultura Viva</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/accesibilidad.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <meta property="og:image" content="https://arteyculturaviva.org/img/og-image.jpg" />
+  <meta property="og:url" content="https://arteyculturaviva.org/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+</head>
+
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main id="contenido-principal">
+
+    <!-- ================================================
+         HERO SLIDER (3 slides + auto-play + flechas)
+         ================================================ -->
+    <section class="hero-slider" aria-label="Presentación principal">
+
+      <!-- Decoraciones mandala -->
+      <svg class="hero-deco hero-deco-izq deco-rotar-lento" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="95" fill="none" stroke="#E8720C" stroke-width="1" />
+        <circle cx="100" cy="100" r="75" fill="none" stroke="#E8720C" stroke-width=".8" />
+        <circle cx="100" cy="100" r="55" fill="none" stroke="#E8720C" stroke-width=".8" />
+        <circle cx="100" cy="100" r="35" fill="none" stroke="#E8720C" stroke-width=".8" />
+        <line x1="5" y1="100" x2="195" y2="100" stroke="#E8720C" stroke-width=".7" />
+        <line x1="100" y1="5" x2="100" y2="195" stroke="#E8720C" stroke-width=".7" />
+        <line x1="33" y1="33" x2="167" y2="167" stroke="#E8720C" stroke-width=".7" />
+        <line x1="167" y1="33" x2="33" y2="167" stroke="#E8720C" stroke-width=".7" />
+        <path d="M100 5 Q125 30 100 55 Q75 30 100 5Z" fill="#E8720C" opacity=".35" />
+        <path d="M100 145 Q125 170 100 195 Q75 170 100 145Z" fill="#E8720C" opacity=".35" />
+        <path d="M5 100 Q30 125 55 100 Q30 75 5 100Z" fill="#E8720C" opacity=".35" />
+        <path d="M145 100 Q170 125 195 100 Q170 75 145 100Z" fill="#E8720C" opacity=".35" />
+      </svg>
+      <svg class="hero-deco hero-deco-der deco-rotar-inv" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="95" fill="none" stroke="#E8720C" stroke-width="1" />
+        <circle cx="100" cy="100" r="75" fill="none" stroke="#E8720C" stroke-width=".8" />
+        <circle cx="100" cy="100" r="55" fill="none" stroke="#E8720C" stroke-width=".8" />
+        <circle cx="100" cy="100" r="35" fill="none" stroke="#E8720C" stroke-width=".8" />
+        <line x1="5" y1="100" x2="195" y2="100" stroke="#E8720C" stroke-width=".7" />
+        <line x1="100" y1="5" x2="100" y2="195" stroke="#E8720C" stroke-width=".7" />
+        <line x1="33" y1="33" x2="167" y2="167" stroke="#E8720C" stroke-width=".7" />
+        <line x1="167" y1="33" x2="33" y2="167" stroke="#E8720C" stroke-width=".7" />
+        <path d="M100 5 Q125 30 100 55 Q75 30 100 5Z" fill="#E8720C" opacity=".35" />
+        <path d="M100 145 Q125 170 100 195 Q75 170 100 145Z" fill="#E8720C" opacity=".35" />
+        <path d="M5 100 Q30 125 55 100 Q30 75 5 100Z" fill="#E8720C" opacity=".35" />
+        <path d="M145 100 Q170 125 195 100 Q170 75 145 100Z" fill="#E8720C" opacity=".35" />
+      </svg>
+
+      <!-- Slide 1 -->
+      <div class="slide activo" aria-label="Diapositiva 1 de 3">
+        <div class="deco-forma forma-blob-1 bg-deco-rojo deco-tr-large" aria-hidden="true"
+          style="opacity:0.25; right:-100px"></div>
+        <div class="deco-forma forma-blob-2 bg-deco-naranja deco-bl-large" aria-hidden="true" style="opacity:0.2"></div>
+        <div class="slide-contenido">
+          <p class="slide-pretitulo">Fundación colombiana de arte</p>
+          <h1>El arte transforma <em>vidas</em> y comunidades</h1>
+          <p class="slide-desc">Somos una organización sin ánimo de lucro que promueve el desarrollo humano a través de
+            la formación artística y cultural en comunidades vulnerables de Bogotá.</p>
+          <div class="slide-btns">
+            <a href="pages/programas.html" class="btn btn-primario">Ver nuestros programas</a>
+            <a href="pages/quienes-somos.html" class="btn btn-blanco"
+              style="background:transparent;border-color:rgba(255,255,255,.45);color:#fff">Conocer la fundación</a>
+          </div>
+          <div class="hero-stats" aria-label="Cifras de impacto">
+            <div>
+              <div class="stat-n">+500</div>
+              <div class="stat-l">Beneficiarios</div>
+            </div>
+            <div>
+              <div class="stat-n">12</div>
+              <div class="stat-l">Programas activos</div>
+            </div>
+            <div>
+              <div class="stat-n">8</div>
+              <div class="stat-l">Años de impacto</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-imagen">
+          <div class="img-ph" style="background:linear-gradient(135deg,#5a3010,#2a1008)">
+            <div style="text-align:center">
+              <svg viewBox="0 0 24 24" fill="none" width="64" height="64" style="opacity:.3;margin-bottom:.5rem">
+                <path
+                  d="M12 2C8 2 5 7 5 11c0 2.5 1.5 4 3 4 1 0 1.5-2 2.5-3s1.5-1.5 1.5-1.5 .5.5 1.5 1.5 1.5 3 2.5 3c1.5 0 3-1.5 3-4 0-4-3-9-7-9z"
+                  fill="white" />
+                <line x1="12" y1="12" x2="12" y2="22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <line x1="9" y1="22" x2="15" y2="22" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <div style="color:rgba(255,255,255,.4);font-size:.8rem">Placeholder — agrega tu imagen aquí</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" aria-label="Diapositiva 2 de 3">
+        <div class="deco-forma forma-blob-2 bg-deco-morado deco-br-tall" aria-hidden="true"
+          style="opacity:0.3; right:45%; bottom:-150px"></div>
+        <div class="deco-forma forma-blob-1 bg-deco-verde deco-tl-small" aria-hidden="true"
+          style="opacity:0.3; width:250px; height:250px; left:-50px"></div>
+        <div class="slide-contenido">
+          <p class="slide-pretitulo">Programas culturales</p>
+          <h1>Danza, música, teatro y <em>artes visuales</em></h1>
+          <p class="slide-desc">Ofrecemos talleres gratuitos en cuatro disciplinas artísticas con instructores
+            certificados, material didáctico incluido y certificación de participación.</p>
+          <div class="slide-btns">
+            <a href="pages/programas.html" class="btn btn-primario">Explorar programas</a>
+            <a href="pages/galeria.html" class="btn btn-blanco"
+              style="background:transparent;border-color:rgba(255,255,255,.45);color:#fff">Ver galería</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-n">4</div>
+              <div class="stat-l">Disciplinas artísticas</div>
+            </div>
+            <div>
+              <div class="stat-n">+80</div>
+              <div class="stat-l">Talleres al año</div>
+            </div>
+            <div>
+              <div class="stat-n">5</div>
+              <div class="stat-l">Sedes en Bogotá</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-imagen">
+          <div class="img-ph" style="background:linear-gradient(135deg,#1a3060,#0a1840)">
+            <div style="text-align:center;color:rgba(255,255,255,.4);font-size:.8rem">Placeholder — imagen programas
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" aria-label="Diapositiva 3 de 3">
+        <div class="deco-forma forma-blob-1 bg-deco-naranja deco-ml-medium" aria-hidden="true"
+          style="opacity:0.25; width:280px; height:380px; left:-80px"></div>
+        <div class="deco-forma forma-pill bg-deco-rojo deco-tc-pill" aria-hidden="true"
+          style="opacity:0.25; transform:rotate(65deg); width:150px; height:350px"></div>
+        <div class="slide-contenido">
+          <p class="slide-pretitulo">Sé parte del cambio</p>
+          <h1>Tu donación es <em>arte en acción</em></h1>
+          <p class="slide-desc">Con tu apoyo podemos seguir transformando vidas a través de la cultura y las artes. El
+            100% de tu donación va directamente a nuestros programas sociales.</p>
+          <div class="slide-btns">
+            <a href="pages/donaciones.html" class="btn btn-primario">Donar ahora</a>
+            <a href="pages/voluntariado.html" class="btn btn-blanco"
+              style="background:transparent;border-color:rgba(255,255,255,.45);color:#fff">Ser voluntario</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-n">$0</div>
+              <div class="stat-l">Mínimo para donar</div>
+            </div>
+            <div>
+              <div class="stat-n">100%</div>
+              <div class="stat-l">A programas sociales</div>
+            </div>
+            <div>
+              <div class="stat-n">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" width="28" height="28">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div class="stat-l">Certificado tributario</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-imagen">
+          <div class="img-ph" style="background:linear-gradient(135deg,#2e4a1a,#1a2e0a)">
+            <div style="text-align:center;color:rgba(255,255,255,.4);font-size:.8rem">Placeholder — imagen donaciones
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles del slider -->
+      <button class="slider-flecha slider-flecha-izq" id="slider-izq" aria-label="Diapositiva anterior">&#8249;</button>
+      <button class="slider-flecha slider-flecha-der" id="slider-der"
+        aria-label="Siguiente diapositiva">&#8250;</button>
+      <div class="slider-puntos" role="group" aria-label="Diapositivas">
+        <button class="slider-punto activo" aria-label="Ir a diapositiva 1"></button>
+        <button class="slider-punto" aria-label="Ir a diapositiva 2"></button>
+        <button class="slider-punto" aria-label="Ir a diapositiva 3"></button>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CIFRAS DE IMPACTO (BANDA)
+         ================================================ -->
+    <section class="banda-cifras" aria-label="Nuestro impacto en números">
+      <div class="contenedor">
+        <div class="banda-cifras-grid">
+          <div class="banda-cifra reveal">
+            <div class="banda-cifra-n">+500</div>
+            <div class="banda-cifra-l">Beneficiarios directos al año</div>
+          </div>
+          <div class="banda-separador" aria-hidden="true"></div>
+          <div class="banda-cifra reveal" style="transition-delay:.1s">
+            <div class="banda-cifra-n">12</div>
+            <div class="banda-cifra-l">Programas culturales activos</div>
+          </div>
+          <div class="banda-separador" aria-hidden="true"></div>
+          <div class="banda-cifra reveal" style="transition-delay:.2s">
+            <div class="banda-cifra-n">8</div>
+            <div class="banda-cifra-l">Años de trayectoria</div>
+          </div>
+          <div class="banda-separador" aria-hidden="true"></div>
+          <div class="banda-cifra reveal" style="transition-delay:.3s">
+            <div class="banda-cifra-n">+80</div>
+            <div class="banda-cifra-l">Talleres realizados por año</div>
+          </div>
+          <div class="banda-separador" aria-hidden="true"></div>
+          <div class="banda-cifra reveal" style="transition-delay:.4s">
+            <div class="banda-cifra-n">5</div>
+            <div class="banda-cifra-l">Sedes en Bogotá</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         QUIÉNES SOMOS
+         ================================================ -->
+    <section class="seccion seccion-clara" id="quienes-somos" aria-labelledby="qs-titulo">
+      <div class="deco-forma forma-blob-1 bg-deco-naranja deco-tr-large" aria-hidden="true" style="opacity:0.3"></div>
+      <div class="deco-forma forma-blob-2 bg-deco-verde deco-bl-large" aria-hidden="true" style="opacity:0.2"></div>
+      <div class="contenedor">
+        <div class="qs-grid">
+          <div class="qs-img-wrap reveal" aria-hidden="true">
+            <div class="qs-img-principal img-ph" style="background:linear-gradient(135deg,#5a3010,#3a1a08)">
+              <div style="text-align:center;color:rgba(255,255,255,.4);font-size:.8rem">Foto institucional</div>
+            </div>
+            <div class="qs-img-flotante img-ph"
+              style="background:linear-gradient(135deg,#2a5010,#1a3008);font-size:.65rem">Actividad</div>
+            <!-- Badge flotante -->
+            <div class="hero-badge">
+              <div class="badge-icono">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--naranja)" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" width="22" height="22">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <div>
+                <div class="badge-t">Fundada en 2017</div>
+                <div class="badge-s">Bogotá D.C., Colombia</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay:.15s">
+            <span class="etiqueta">Quiénes somos</span>
+            <h2 id="qs-titulo">Una fundación nacida del amor por el arte colombiano</h2>
+            <p>Somos una organización sin ánimo de lucro comprometida con el desarrollo humano y social a través del
+              arte y la cultura. Creemos que la expresión artística es una herramienta poderosa de transformación
+              personal y comunitaria.</p>
+            <p>Desde nuestra fundación, hemos trabajado incansablemente para acercar el arte a comunidades que
+              históricamente han tenido pocas oportunidades de acceso a la formación cultural y artística.</p>
+            <div class="mv-grid">
+              <div class="mv-card">
+                <h4>Misión</h4>
+                <p>Promover el acceso a la formación artística y cultural como herramienta de transformación social en
+                  comunidades vulnerables de Colombia.</p>
+              </div>
+              <div class="mv-card">
+                <h4>Visión</h4>
+                <p>Ser la fundación cultural de referencia en Colombia, reconocida por su impacto social y la calidad de
+                  sus programas artísticos.</p>
+              </div>
+            </div>
+            <a href="pages/quienes-somos.html" class="btn btn-primario" style="margin-top:1.6rem">Nuestra historia
+              completa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         LÍNEA DE TIEMPO
+         ================================================ -->
+    <section class="seccion seccion-crema" aria-labelledby="timeline-titulo">
+      <div class="deco-forma forma-blob-1 bg-deco-morado deco-tl-small" aria-hidden="true" style="opacity:0.2"></div>
+      <div class="deco-forma forma-pill bg-deco-naranja deco-br-tall" aria-hidden="true" style="opacity:0.2"></div>
+      <div class="contenedor">
+        <div class="sec-encabezado reveal">
+          <span class="etiqueta">Nuestra historia</span>
+          <h2 id="timeline-titulo">Ocho años construyendo cultura</h2>
+          <p>Un recorrido por los hitos más importantes de la Fundación Arte y Cultura Viva.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-punto"></div>
+            <div class="timeline-anio">2017</div>
+            <div class="timeline-card">
+              <h4>Fundación</h4>
+              <p>Nace la Fundación Arte y Cultura Viva con el primer taller de artes visuales en el barrio Kennedy, con
+                25 niños participantes.</p>
+            </div>
+          </div>
+          <div class="timeline-item derecha reveal" style="transition-delay:.1s">
+            <div class="timeline-punto"></div>
+            <div class="timeline-anio">2018</div>
+            <div class="timeline-card">
+              <h4>Expansión a música y danza</h4>
+              <p>Incorporamos los programas de formación musical y danza folclórica colombiana, llegando a 5 barrios de
+                Bogotá.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal" style="transition-delay:.2s">
+            <div class="timeline-punto"></div>
+            <div class="timeline-anio">2020</div>
+            <div class="timeline-card">
+              <h4>Arte en tiempos de pandemia</h4>
+              <p>Adaptamos nuestros programas al formato virtual, manteniendo el contacto con más de 200 beneficiarios
+                durante el confinamiento.</p>
+            </div>
+          </div>
+          <div class="timeline-item derecha reveal" style="transition-delay:.3s">
+            <div class="timeline-punto"></div>
+            <div class="timeline-anio">2022</div>
+            <div class="timeline-card">
+              <h4>Premio a la Innovación Social</h4>
+              <p>Recibimos el reconocimiento de la Secretaría de Cultura de Bogotá por nuestro programa de murales
+                comunitarios.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal" style="transition-delay:.4s">
+            <div class="timeline-punto"></div>
+            <div class="timeline-anio">2025</div>
+            <div class="timeline-card">
+              <h4>Hoy: +500 beneficiarios</h4>
+              <p>Con 12 programas activos, 5 sedes y más de 500 beneficiarios al año, seguimos creciendo y transformando
+                comunidades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         PROGRAMAS
+         ================================================ -->
+    <section class="seccion seccion-clara" id="programas" aria-labelledby="prog-titulo">
+      <div class="deco-forma forma-blob-2 bg-deco-rojo deco-ml-medium" aria-hidden="true" style="opacity:0.25"></div>
+      <div class="deco-forma forma-pill bg-deco-morado deco-br-tall" aria-hidden="true" style="opacity:0.35"></div>
+      <div class="contenedor">
+        <div class="sec-encabezado reveal">
+          <span class="etiqueta">Programas y proyectos</span>
+          <h2 id="prog-titulo">Lo que hacemos por la cultura</h2>
+          <p>Ofrecemos formación artística gratuita en cuatro disciplinas con instructores certificados y material
+            incluido.</p>
+        </div>
+        <div class="programas-grid">
+          <article class="programa-card reveal">
+            <div class="programa-card-img">
+              <div class="img-ph" style="height:180px;background:linear-gradient(135deg,#6a3010,#4a2008)">Artes visuales
+              </div>
+            </div>
+            <div class="programa-card-body">
+              <span class="prog-cat prog-cat-naranja">Artes visuales</span>
+              <h3>Taller de pintura y escultura</h3>
+              <p>Formaciónartística integral: pintura, dibujo, escultura y técnicas mixtas. Cupos disponibles para
+                niños, jóvenes y adultos.</p>
+            </div>
+            <div class="programa-footer"><span>Bogotá · 2025</span><a href="pages/programas.html" class="enlace-mas">Ver
+                más</a></div>
+          </article>
+          <article class="programa-card reveal" style="transition-delay:.12s">
+            <div class="programa-card-img">
+              <div class="img-ph" style="height:180px;background:linear-gradient(135deg,#2a5010,#1a3008)">Música</div>
+            </div>
+            <div class="programa-card-body">
+              <span class="prog-cat prog-cat-verde">Música</span>
+              <h3>Escuela de música comunitaria</h3>
+              <p>Aprende guitarra, percusión, viento y canto coral. Clases grupales e individuales para todas las
+                edades, desde los 6 años.</p>
+            </div>
+            <div class="programa-footer"><span>Bogotá · 2025</span><a href="pages/programas.html" class="enlace-mas">Ver
+                más</a></div>
+          </article>
+          <article class="programa-card reveal" style="transition-delay:.24s">
+            <div class="programa-card-img">
+              <div class="img-ph" style="height:180px;background:linear-gradient(135deg,#4a1060,#2a0840)">Danza</div>
+            </div>
+            <div class="programa-card-body">
+              <span class="prog-cat prog-cat-morado">Danza</span>
+              <h3>Danza folclórica colombiana</h3>
+              <p>Cumbia, mapalé, bambuco y danzas regionales colombianas. Preservando y difundiendo el patrimonio
+                cultural de la nación.</p>
+            </div>
+            <div class="programa-footer"><span>Bogotá · 2025</span><a href="pages/programas.html" class="enlace-mas">Ver
+                más</a></div>
+          </article>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem">
+          <a href="pages/programas.html" class="btn btn-contorno">Ver todos los programas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         TESTIMONIOS
+         ================================================ -->
+    <section class="seccion seccion-naranja testimonios-seccion" aria-labelledby="test-titulo"
+      style="position:relative;overflow:hidden">
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.06;pointer-events:none"
+        viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <circle cx="100" cy="225" r="300" fill="none" stroke="#fff" stroke-width="2" />
+        <circle cx="700" cy="225" r="300" fill="none" stroke="#fff" stroke-width="2" />
+        <circle cx="400" cy="50" r="200" fill="none" stroke="#fff" stroke-width="1.5" />
+        <circle cx="400" cy="400" r="200" fill="none" stroke="#fff" stroke-width="1.5" />
+      </svg>
+      <div class="contenedor">
+        <div class="sec-encabezado reveal">
+          <span class="etiqueta etiqueta-blanca">Voces de nuestra comunidad</span>
+          <h2 id="test-titulo" style="color:#fff">Lo que dicen quienes nos acompañan</h2>
+          <p style="color:rgba(255,255,255,.75)">Historias reales de transformación a través del arte y la cultura.</p>
+        </div>
+        <div class="testimonios-grid-home">
+          <div class="testimonio-h-card reveal">
+            <svg class="testimonio-comilla" viewBox="0 0 24 24" fill="currentColor" width="36" height="36"
+              aria-hidden="true">
+              <path
+                d="M11.3 6C7 6.4 4 8.7 4 13v5h6v-5H7c0-2.1 1.2-3.8 4.3-4.1V6zm9 0C16 6.4 13 8.7 13 13v5h6v-5h-3c0-2.1 1.2-3.8 4.3-4.1V6z" />
+            </svg>
+            <p class="testimonio-h-texto">"Entrar a la fundación cambió mi vida. Antes no me creía capaz de nada; hoy
+              soy instructora de danza y estoy formando a otros niños. El arte me enseñó que sí puedo."</p>
+            <div class="testimonio-h-autor">
+              <div class="testimonio-h-avatar img-ph" style="background:linear-gradient(135deg,#4a1060,#2a0840)">MG
+              </div>
+              <div>
+                <div class="testimonio-h-nombre">María Gabriela L.</div>
+                <div class="testimonio-h-rol">Beneficiaria y voluntaria, programa de danza</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonio-h-card reveal" style="transition-delay:.12s">
+            <svg class="testimonio-comilla" viewBox="0 0 24 24" fill="currentColor" width="36" height="36"
+              aria-hidden="true">
+              <path
+                d="M11.3 6C7 6.4 4 8.7 4 13v5h6v-5H7c0-2.1 1.2-3.8 4.3-4.1V6zm9 0C16 6.4 13 8.7 13 13v5h6v-5h-3c0-2.1 1.2-3.8 4.3-4.1V6z" />
+            </svg>
+            <p class="testimonio-h-texto">"Como padre de familia, ver a mi hijo desarrollar disciplina, creatividad y
+              amor por la música a través de los talleres gratuitos de la fundación es un regalo invaluable."</p>
+            <div class="testimonio-h-autor">
+              <div class="testimonio-h-avatar img-ph" style="background:linear-gradient(135deg,#2a5010,#1a3008)">JC
+              </div>
+              <div>
+                <div class="testimonio-h-nombre">Jorge Carmona</div>
+                <div class="testimonio-h-rol">Padre de familia · Programa de música</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonio-h-card reveal" style="transition-delay:.24s">
+            <svg class="testimonio-comilla" viewBox="0 0 24 24" fill="currentColor" width="36" height="36"
+              aria-hidden="true">
+              <path
+                d="M11.3 6C7 6.4 4 8.7 4 13v5h6v-5H7c0-2.1 1.2-3.8 4.3-4.1V6zm9 0C16 6.4 13 8.7 13 13v5h6v-5h-3c0-2.1 1.2-3.8 4.3-4.1V6z" />
+            </svg>
+            <p class="testimonio-h-texto">"Donar a Arte y Cultura Viva fue una de las mejores decisiones de nuestra
+              empresa. El impacto directo es medible y el equipo trabaja con una transparencia y profesionalismo
+              ejemplares."</p>
+            <div class="testimonio-h-autor">
+              <div class="testimonio-h-avatar img-ph" style="background:linear-gradient(135deg,#1a3060,#0a1840)">AP
+              </div>
+              <div>
+                <div class="testimonio-h-nombre">Andrea Palacios</div>
+                <div class="testimonio-h-rol">Directora RSE · Empresa donante</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         GALERÍA ANIMADA
+         ================================================ -->
+    <section class="seccion seccion-oscura" id="galeria" aria-labelledby="gal-titulo">
+      <div class="deco-forma forma-blob-1 bg-deco-naranja deco-tl-small" aria-hidden="true" style="opacity:0.35"></div>
+      <div class="deco-forma forma-pill bg-deco-verde deco-tc-pill" aria-hidden="true" style="opacity:0.4"></div>
+      <div class="contenedor">
+        <div class="sec-encabezado reveal">
+          <span class="etiqueta etiqueta-blanca">Galería</span>
+          <h2 id="gal-titulo" style="color:#fff">Momentos que nos inspiran</h2>
+          <p style="color:rgba(255,255,255,.5)">Capturas de nuestros talleres, eventos y festivales culturales en
+            Bogotá.
+          </p>
+        </div>
+        <div class="galeria-columnas-wrap reveal">
+          <!-- Franjas laterales decorativas -->
+          <div class="galeria-deco-lat izq" aria-hidden="true">
+            <span style="background:#E8720C"></span>
+            <span style="background:#E8C020"></span>
+            <span style="background:#6AAF20"></span>
+            <span style="background:#2A6DB5"></span>
+            <span style="background:#7B3FA0"></span>
+            <span style="background:#D13B2A"></span>
+          </div>
+          <div class="galeria-deco-lat der" aria-hidden="true">
+            <span style="background:#E8720C"></span>
+            <span style="background:#E8C020"></span>
+            <span style="background:#6AAF20"></span>
+            <span style="background:#2A6DB5"></span>
+            <span style="background:#7B3FA0"></span>
+            <span style="background:#D13B2A"></span>
+          </div>
+          <div class="galeria-fade-top"></div>
+          <div class="galeria-fade-bot"></div>
+          <div class="galeria-columnas" aria-label="Galería de imágenes en movimiento">
+            <!-- Col 1: sube -->
+            <div class="gal-col sube">
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#4a2e1a">Danza</div>
+                <div class="gal-overlay"><span>Taller de danza folclórica</span></div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#4a1a1a">Música</div>
+                <div class="gal-overlay"><span>Concierto comunitario</span></div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#1a1a4a">Teatro</div>
+                <div class="gal-overlay"><span>Presentación teatral</span></div>
+              </div>
+              <!-- duplicado para bucle continuo -->
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#4a2e1a">Danza</div>
+                <div class="gal-overlay"><span>Taller de danza folclórica</span></div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#4a1a1a">Música</div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#1a1a4a">Teatro</div>
+              </div>
+            </div>
+            <!-- Col 2: baja lento -->
+            <div class="gal-col baja lento">
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#1a2e4a">Artes visuales</div>
+                <div class="gal-overlay"><span>Exposición itinerante</span></div>
+              </div>
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#2e4a1a">Comunidad</div>
+                <div class="gal-overlay"><span>Festival Arte Viva 2024</span></div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#1a4a2e">Taller</div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#1a2e4a">Artes visuales</div>
+              </div>
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#2e4a1a">Comunidad</div>
+                <div class="gal-overlay"><span>Festival Arte Viva 2024</span></div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#1a4a2e">Taller</div>
+              </div>
+            </div>
+            <!-- Col 3: sube lento -->
+            <div class="gal-col sube lento">
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#2e1a4a">Música</div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#4a2e2e">Exposición</div>
+                <div class="gal-overlay"><span>Muestra colectiva</span></div>
+              </div>
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#4a1a1a">Danza</div>
+                <div class="gal-overlay"><span>Gala de danza folclórica</span></div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#2e1a4a">Música</div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#4a2e2e">Exposición</div>
+              </div>
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#4a1a1a">Danza</div>
+              </div>
+            </div>
+            <!-- Col 4: baja -->
+            <div class="gal-col baja">
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#1a4a2e">Concierto</div>
+                <div class="gal-overlay"><span>Concierto en el parque</span></div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#1a2e4a">Niños</div>
+                <div class="gal-overlay"><span>Programa infantil</span></div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#2e4a1a">Arte urbano</div>
+              </div>
+              <div class="gal-item tall">
+                <div class="img-ph" style="height:200px;background:#1a4a2e">Concierto</div>
+              </div>
+              <div class="gal-item medium">
+                <div class="img-ph" style="height:155px;background:#1a2e4a">Niños</div>
+              </div>
+              <div class="gal-item short">
+                <div class="img-ph" style="height:115px;background:#2e4a1a">Arte urbano</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem">
+          <a href="pages/galeria.html" class="btn btn-blanco">Ver galería completa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         NOTICIAS lorem
+         ================================================ -->
+    <section class="seccion seccion-clara" id="noticias" aria-labelledby="not-titulo">
+      <div class="deco-forma forma-blob-2 bg-deco-morado deco-mid-left" aria-hidden="true"
+        style="opacity:0.25; top:20%"></div>
+      <div class="deco-forma forma-blob-1 bg-deco-naranja deco-br-tall" aria-hidden="true"
+        style="opacity:0.3; bottom:-10%"></div>
+      <div class="contenedor">
+        <div class="sec-encabezado reveal">
+          <span class="etiqueta">Noticias y blog</span>
+          <h2 id="not-titulo">Lo más reciente de la fundación</h2>
+          <p>Mantente al día con nuestras actividades, eventos culturales y convocatorias.</p>
+        </div>
+        <div class="noticias-grid">
+          <article class="noticia-destacada reveal">
+            <div class="noticia-img">
+              <div class="img-ph" style="background:linear-gradient(135deg,#6a3010,#4a2008)">Imagen noticia</div>
+            </div>
+            <div class="noticia-body">
+              <div class="noticia-meta"><span class="noticia-cat">Evento</span><time class="noticia-fecha"
+                  datetime="2025-03-15">15 de marzo, 2025</time></div>
+              <h3>Festival Arte Viva 2025: celebrando la cultura popular colombiana</h3>
+              <p>Nuestro festival anual reunió a más de 800 asistentes en el Parque Metropolitano para disfrutar de
+                shows de danza, música en vivo y exposiciones artísticas comunitarias.</p>
+              <a href="pages/noticias.html" class="enlace-mas">Leer noticia</a>
+            </div>
+          </article>
+          <article class="noticia-pequeña reveal" style="transition-delay:.12s">
+            <div class="noticia-img">
+              <div class="img-ph" style="background:linear-gradient(135deg,#2a5010,#1a3008)">Imagen</div>
+            </div>
+            <div class="noticia-body">
+              <div class="noticia-meta"><span class="noticia-cat">Convocatoria</span><time class="noticia-fecha"
+                  datetime="2025-03-08">8 mar 2025</time></div>
+              <h3>Inscripciones abiertas para el programa de música 2025</h3>
+              <p style="font-size:.87rem">Cupos disponibles para niños de 6 a 16 años. Clases gratuitas de guitarra,
+                percusión y canto coral. ¡No te quedes sin el tuyo!</p>
+              <a href="pages/noticias.html" class="enlace-mas">Leer más</a>
+            </div>
+          </article>
+          <article class="noticia-pequeña reveal" style="transition-delay:.24s">
+            <div class="noticia-img">
+              <div class="img-ph" style="background:linear-gradient(135deg,#4a1060,#2a0840)">Imagen</div>
+            </div>
+            <div class="noticia-body">
+              <div class="noticia-meta"><span class="noticia-cat">Premio</span><time class="noticia-fecha"
+                  datetime="2025-02-22">22 feb 2025</time></div>
+              <h3>Reconocidos por la Secretaría de Cultura por proyecto de murales</h3>
+              <p style="font-size:.87rem">Nuestro programa "Arte en los Barrios" fue galardonado como mejor iniciativa
+                de apropiación cultural del 2024 en Bogotá.</p>
+              <a href="pages/noticias.html" class="enlace-mas">Leer más</a>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem">
+          <a href="pages/noticias.html" class="btn btn-contorno">Ver todas las noticias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         DONACIONES
+         ================================================ -->
+    <section class="seccion seccion-naranja" id="donaciones" aria-labelledby="don-titulo"
+      style="position:relative;overflow:hidden">
+      <div class="deco-forma forma-blob-1 bg-deco-rojo deco-tr-large" aria-hidden="true"
+        style="opacity:0.3; right:-200px"></div>
+      <div class="deco-forma forma-pill bg-deco-verde deco-bl-large" aria-hidden="true"
+        style="opacity:0.25; left:-200px"></div>
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.06;pointer-events:none"
+        viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <circle cx="100" cy="200" r="280" fill="none" stroke="#fff" stroke-width="2" />
+        <circle cx="700" cy="200" r="280" fill="none" stroke="#fff" stroke-width="2" />
+        <circle cx="400" cy="50" r="200" fill="none" stroke="#fff" stroke-width="1.5" />
+        <circle cx="400" cy="350" r="200" fill="none" stroke="#fff" stroke-width="1.5" />
+      </svg>
+      <div class="contenedor">
+        <div class="donaciones-grid">
+          <div class="reveal">
+            <span class="etiqueta etiqueta-blanca">Apóyanos</span>
+            <h2 id="don-titulo" style="color:#fff">Tu donación cambia vidas a través del arte</h2>
+            <p style="color:rgba(255,255,255,.78)">Cada aporte, sin importar el monto, contribuye directamente a que más
+              niños, jóvenes y adultos accedan a la formación artística gratuita. El 100% de tu donación va a programas
+              sociales.</p>
+            <div class="don-impacto">
+              <div class="don-item">
+                <div class="don-num">$20.000</div>
+                <div class="don-txt">Un mes de clases de arte para un niño</div>
+              </div>
+              <div class="don-item">
+                <div class="don-num">$50.000</div>
+                <div class="don-txt">Materiales completos para un taller</div>
+              </div>
+              <div class="don-item">
+                <div class="don-num">$100.000</div>
+                <div class="don-txt">Beca mensual completa</div>
+              </div>
+              <div class="don-item">
+                <div class="don-num">$500.000</div>
+                <div class="don-txt">Patrocinar un evento cultural</div>
+              </div>
+            </div>
+          </div>
+          <div class="don-form-card reveal" style="transition-delay:.15s">
+            <h3>Hacer una donación</h3>
+            <p>Elige el monto o ingresa uno personalizado. Recibes certificado tributario.</p>
+            <div class="montos-rapidos" role="group" aria-label="Montos sugeridos">
+              <button class="monto-btn activo" type="button">$20.000</button>
+              <button class="monto-btn" type="button">$50.000</button>
+              <button class="monto-btn" type="button">$100.000</button>
+              <button class="monto-btn" type="button">$500.000</button>
+            </div>
+            <input type="number" id="monto-otro" class="campo-base" placeholder="Otro monto (COP)"
+              aria-label="Ingresar otro monto" />
+            <a href="pages/donaciones.html" class="btn btn-primario"
+              style="width:100%;text-align:center;display:block;border-radius:4px">Continuar con la donación</a>
+            <p class="texto-seguro">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="16" height="16" style="vertical-align:bottom;margin-right:4px">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              Pago seguro · Certificado de donación incluido
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ALIADOS / PARTNERS
+         ================================================ -->
+    <section class="seccion seccion-crema" aria-labelledby="aliados-titulo">
+      <div class="deco-forma forma-blob-2 bg-deco-verde deco-tl-small" aria-hidden="true" style="opacity:0.15"></div>
+      <div class="contenedor">
+        <div class="sec-encabezado reveal">
+          <span class="etiqueta">Aliados y financiadores</span>
+          <h2 id="aliados-titulo">Quienes hacen posible nuestra misión</h2>
+          <p>Empresas, instituciones y organismos que nos apoyan y creen en el poder transformador del arte.</p>
+        </div>
+        <div class="aliados-grid-home">
+          <div class="aliado-logo-home reveal">
+            <div style="font-size:.7rem;color:var(--cafe-suave);text-transform:uppercase;letter-spacing:.07em">Logo
+              aliado 1</div>
+          </div>
+          <div class="aliado-logo-home reveal" style="transition-delay:.08s">
+            <div style="font-size:.7rem;color:var(--cafe-suave);text-transform:uppercase;letter-spacing:.07em">Logo
+              aliado 2</div>
+          </div>
+          <div class="aliado-logo-home reveal" style="transition-delay:.16s">
+            <div style="font-size:.7rem;color:var(--cafe-suave);text-transform:uppercase;letter-spacing:.07em">Logo
+              aliado 3</div>
+          </div>
+          <div class="aliado-logo-home reveal" style="transition-delay:.24s">
+            <div style="font-size:.7rem;color:var(--cafe-suave);text-transform:uppercase;letter-spacing:.07em">Logo
+              aliado 4</div>
+          </div>
+          <div class="aliado-logo-home reveal" style="transition-delay:.32s">
+            <div style="font-size:.7rem;color:var(--cafe-suave);text-transform:uppercase;letter-spacing:.07em">Logo
+              aliado 5</div>
+          </div>
+          <div class="aliado-logo-home reveal" style="transition-delay:.40s">
+            <div style="font-size:.7rem;color:var(--cafe-suave);text-transform:uppercase;letter-spacing:.07em">Logo
+              aliado 6</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CONTÁCTENOS
+         ================================================ -->
+    <section class="seccion seccion-clara" id="contacto" aria-labelledby="con-titulo">
+      <div class="deco-forma forma-blob-2 bg-deco-morado deco-ml-medium" aria-hidden="true" style="opacity:0.2"></div>
+      <div class="deco-forma forma-blob-1 bg-deco-verde deco-br-tall" aria-hidden="true" style="opacity:0.15"></div>
+      <div class="contenedor">
+        <div class="contacto-grid">
+          <div class="reveal">
+            <span class="etiqueta">Contáctenos</span>
+            <h2 id="con-titulo">Hablemos sobre arte y cultura</h2>
+            <p>¿Tienes preguntas sobre nuestros programas, quieres ser voluntario o buscas alianzas? Escríbenos y te
+              respondemos en menos de 24 horas.</p>
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--naranja)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="22" height="22">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Dirección</h4>
+                  <p>Tv. 68b #30-68, Bogotá D.C.<br>Barrio Boyacá Real</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--naranja)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="22" height="22">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Teléfono</h4>
+                  <p>+57 (1) 000 0000<br>Lun–Vie 8am–5pm</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--naranja)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="22" height="22">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Correo electrónico</h4>
+                  <p>info@arteyculturaviva.org<br>donaciones@arteyculturaviva.org</p>
+                </div>
+              </div>
+            </div>
+            <div class="redes-wrap">
+              <h4>Síguenos en redes sociales</h4>
+              <div class="redes-iconos" id="redes-contacto-home">
+                <!-- insertadas por JS -->
+              </div>
+            </div>
+          </div>
+          <div class="form-contacto-card reveal" style="transition-delay:.15s">
+            <h3>Envíanos un mensaje</h3>
+            <form id="form-contacto" novalidate>
+              <div class="campo-grupo">
+                <div class="campo-form"><label for="nombre-inicio">Nombre *</label>
+                  <input type="text" id="nombre-inicio" name="nombre" required placeholder="Tu nombre"
+                    autocomplete="name" aria-describedby="error-nombre-inicio" />
+                  <span id="error-nombre-inicio" class="error-msg"
+                    style="display:none; color:var(--rojo); font-size:0.8rem; margin-top:0.3rem;"></span>
+                </div>
+                <div class="campo-form"><label for="email-inicio">Correo *</label>
+                  <input type="email" id="email-inicio" name="email" required placeholder="tu@correo.com"
+                    autocomplete="email" aria-describedby="error-email-inicio" />
+                  <span id="error-email-inicio" class="error-msg"
+                    style="display:none; color:var(--rojo); font-size:0.8rem; margin-top:0.3rem;"></span>
+                </div>
+              </div>
+              <div class="campo-form" style="margin-top:.9rem"><label for="asunto-inicio">Asunto</label>
+                <select id="asunto-inicio" name="asunto" aria-describedby="error-asunto-inicio">
+                  <option value="">Seleccionar…</option>
+                  <option>Información sobre programas</option>
+                  <option>Donaciones y alianzas</option>
+                  <option>Voluntariado</option>
+                  <option>Prensa y medios</option>
+                  <option>Otro</option>
+                </select>
+                <span id="error-asunto-inicio" class="error-msg"
+                  style="display:none; color:var(--rojo); font-size:0.8rem; margin-top:0.3rem;"></span>
+              </div>
+              <div class="campo-form" style="margin-top:.9rem"><label for="mensaje-inicio">Mensaje *</label>
+                <textarea id="mensaje-inicio" name="mensaje" required placeholder="Escríbenos tu mensaje…"
+                  aria-describedby="error-mensaje-inicio"></textarea>
+                <span id="error-mensaje-inicio" class="error-msg"
+                  style="display:none; color:var(--rojo); font-size:0.8rem; margin-top:0.3rem;"></span>
+              </div>
+              <button type="submit" class="btn btn-primario"
+                style="width:100%;text-align:center;border-radius:4px;margin-top:.5rem">Enviar mensaje</button>
+              <p style="font-size:.76rem;color:var(--cafe-suave);margin-top:.7rem;margin-bottom:0">Al enviar aceptas
+                nuestra <a href="pages/politica-privacidad.html">Política de privacidad</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/nav-footer.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/accesibilidad.js"></script>
+  <script>
+    /* Insertar iconos de redes en el contacto home */
+    (function () {
+      var container = document.getElementById('redes-contacto-home');
+      if (!container) return;
+      var redes = [
+        { label: 'Facebook', svg: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>' },
+        { label: 'Instagram', svg: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>' },
+        { label: 'YouTube', svg: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>' },
+        { label: 'Twitter/X', svg: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M14.095 10.316 22.286 1h-1.94L13.23 9.088 7.551 1H1l8.582 12.231L1 23h1.94l7.637-8.543L16.45 23H23l-8.905-12.684zm-2.702 3.023-.885-1.23L3.696 2.432h3.032l5.688 7.874.884 1.23 7.389 10.239h-3.032l-6.264-8.436z"/></svg>' }
+      ];
+      redes.forEach(function (r) {
+        var a = document.createElement('a');
+        a.href = '#';
+        a.className = 'red-btn';
+        a.setAttribute('aria-label', r.label);
+        a.innerHTML = r.svg;
+        container.appendChild(a);
+      });
+    })();
+  </script>
+</body>
+
+</html>
