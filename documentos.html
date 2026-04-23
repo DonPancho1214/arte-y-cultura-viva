@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    if (localStorage.getItem('tema_acv') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentos — Fundación Arte y Cultura Viva</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link rel="stylesheet" href="../css/accesibilidad.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://ejemplo.com/img/og-image.jpg" />
+  <meta property="og:url" content="https://ejemplo.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+  <style>
+    .docs-lista { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+    .doc-item { background: var(--arena-100); padding: 1.5rem; border-radius: var(--r-md); display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: background .2s; }
+    .doc-item:hover { background: var(--arena-300); }
+    .doc-info { display: flex; flex-direction: column; gap: .3rem; }
+    .doc-titulo { font-family: var(--fuente-titulos); font-size: 1.3rem; font-weight: 700; color: var(--cafe-oscuro); margin: 0; }
+    .doc-meta { font-size: .85rem; color: var(--cafe-suave); }
+    /* Modo oscuro */
+    [data-theme="dark"] .doc-item { background: rgba(255,255,255,0.05); }
+    [data-theme="dark"] .doc-item:hover { background: rgba(255,255,255,0.1); }
+    [data-theme="dark"] .doc-titulo { color: #fff; }
+    
+    @media(max-width: 600px){
+      .doc-item { flex-direction: column; align-items: flex-start; }
+      .doc-item .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<main id="contenido-principal">
+  <!-- HERO -->
+  <section class="pagina-hero">
+    <div class="contenedor max-md">
+      <span class="etiqueta">Transparencia y recursos</span>
+      <h1>Documentos legales e informes</h1>
+      <p class="desc">Aquí podrás descargar y consultar nuestros reportes anuales, políticas y otros documentos de acceso público.</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="seccion seccion-crema">
+    <div class="contenedor max-md">
+      <ul class="docs-lista">
+        <li class="doc-item reveal">
+          <div class="doc-info">
+            <h3 class="doc-titulo">Informe de Gestión 2023</h3>
+            <span class="doc-meta">Publicado: 12 Marzo 2024 · PDF (2.4 MB)</span>
+          </div>
+          <a href="#" class="btn btn-primario">Descargar</a>
+        </li>
+        <li class="doc-item reveal" style="transition-delay: .1s;">
+          <div class="doc-info">
+            <h3 class="doc-titulo">Estados Financieros 2023</h3>
+            <span class="doc-meta">Publicado: 15 Febrero 2024 · PDF (1.1 MB)</span>
+          </div>
+          <a href="#" class="btn btn-primario">Descargar</a>
+        </li>
+        <li class="doc-item reveal" style="transition-delay: .2s;">
+          <div class="doc-info">
+            <h3 class="doc-titulo">Estatutos de la Fundación</h3>
+            <span class="doc-meta">Última actualización: 10 Enero 2023 · PDF (850 KB)</span>
+          </div>
+          <a href="#" class="btn btn-primario">Descargar</a>
+        </li>
+        <li class="doc-item reveal" style="transition-delay: .3s;">
+          <div class="doc-info">
+            <h3 class="doc-titulo">Política de Tratamiento de Datos</h3>
+            <span class="doc-meta">Última actualización: Agosto 2023 · PDF (400 KB)</span>
+          </div>
+          <a href="politica-privacidad.html" class="btn btn-contorno">Ver en web</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="../js/nav-footer.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/accesibilidad.js"></script>
+</body>
+</html>

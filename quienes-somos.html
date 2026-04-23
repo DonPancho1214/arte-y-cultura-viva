@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    if (localStorage.getItem('tema_acv') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conoce la historia, misión, visión, valores y equipo de la Fundación Arte y Cultura Viva. Organización sin ánimo de lucro en Bogotá, Colombia." />
+  <title>Quiénes somos — Fundación Arte y Cultura Viva</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/accesibilidad.css" />
+  <style>
+    .historia-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .valores-grid  { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }
+    .valor-card    { background:var(--blanco); border-radius:var(--r-lg); padding:2rem; border-top:4px solid var(--naranja); transition:transform .3s, box-shadow .3s; }
+    .valor-card:hover { transform:translateY(-5px); box-shadow:var(--sombra-md); }
+    .valor-icono   { margin-bottom:1rem; }
+    .equipo-grid   { display:grid; grid-template-columns:repeat(4,1fr); gap:2.5rem; margin-top:3.5rem; }
+    .persona-card  { text-align:center; display:flex; flex-direction:column; align-items:center; }
+    .persona-foto  { width:100%; max-width:200px; aspect-ratio:1; border-radius:var(--r-xl); overflow:hidden; margin:0 auto 1.2rem; transition:transform .3s; box-shadow:var(--sombra-sm); }
+    .persona-card:hover .persona-foto { transform:scale(1.04) translateY(-5px); box-shadow:var(--sombra-md); }
+    .persona-nombre{ font-family:var(--fuente-titulo); font-size:1.15rem; margin-bottom:.3rem; color:var(--cafe); }
+    .persona-cargo { font-size:.75rem; color:var(--naranja); font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
+    .persona-bio   { font-size:.84rem; color:var(--cafe-suave); margin-top:.5rem; }
+    .aliados-grid  { display:grid; grid-template-columns:repeat(5,1fr); gap:1.2rem; margin-top:3rem; }
+    .aliado-logo   { aspect-ratio:2/1; background:var(--blanco); border-radius:var(--r-md); display:flex; align-items:center; justify-content:center; font-size:.75rem; color:var(--cafe-suave); text-transform:uppercase; letter-spacing:.07em; border:1px solid var(--arena-100); transition:transform .3s; }
+    .aliado-logo:hover { transform:translateY(-3px); box-shadow:var(--sombra-sm); }
+    .cifras-grid   { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; text-align:center; }
+    .cifra-item    { background:var(--blanco); border-radius:var(--r-lg); padding:2rem; transition:transform .3s; }
+    .cifra-item:hover { transform:translateY(-4px); }
+    .cifra-num     { font-family:var(--fuente-titulo); font-size:2.5rem; font-weight:700; color:var(--naranja); line-height:1; }
+    .cifra-label   { font-size:.88rem; color:var(--cafe-suave); margin-top:.4rem; }
+    @media(max-width:1024px){ .equipo-grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:768px){ .historia-grid,.cifras-grid{grid-template-columns:1fr} .valores-grid,.aliados-grid{grid-template-columns:repeat(2,1fr)} .equipo-grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:480px){ .equipo-grid{grid-template-columns:1fr} .aliados-grid{grid-template-columns:1fr 1fr} }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Quiénes somos — Fundación Arte y Cultura Viva" />
+  <meta property="og:description" content="Conoce nuestra historia, misión y el equipo apasionado detrás de la Fundación Arte y Cultura Viva." />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<main id="contenido-principal">
+
+  <!-- HERO -->
+  <section class="pagina-hero">
+    <div class="deco-forma forma-blob-1 bg-deco-naranja deco-tl-small" aria-hidden="true" style="opacity:0.2"></div>
+    <div class="deco-forma forma-blob-2 bg-deco-morado deco-br-tall" aria-hidden="true" style="opacity:0.15; right:5%; bottom:-30px"></div>
+    <div class="contenedor" style="position:relative">
+      <!-- Mandala decorativo -->
+      <svg style="position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:200px;opacity:.1;pointer-events:none" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="#E8720C" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="65" fill="none" stroke="#E8720C" stroke-width="1"/>
+        <circle cx="100" cy="100" r="40" fill="none" stroke="#E8720C" stroke-width="1"/>
+        <line x1="10" y1="100" x2="190" y2="100" stroke="#E8720C" stroke-width=".8"/>
+        <line x1="100" y1="10" x2="100" y2="190" stroke="#E8720C" stroke-width=".8"/>
+        <line x1="36" y1="36" x2="164" y2="164" stroke="#E8720C" stroke-width=".8"/>
+        <line x1="164" y1="36" x2="36" y2="164" stroke="#E8720C" stroke-width=".8"/>
+      </svg>
+      <span class="etiqueta">La fundación</span>
+      <h1>Quiénes somos</h1>
+      <p class="desc">Organización sin ánimo de lucro que promueve el desarrollo humano y social a través del arte y la cultura en Colombia desde 2017.</p>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="seccion seccion-clara" id="historia">
+    <div class="deco-forma forma-blob-1 bg-deco-naranja deco-tr-large" aria-hidden="true" style="opacity:0.25"></div>
+    <div class="deco-forma forma-blob-2 bg-deco-verde deco-bl-large" aria-hidden="true" style="opacity:0.18"></div>
+    <div class="contenedor">
+      <div class="historia-grid">
+        <div class="reveal">
+          <div style="aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden;margin-bottom:1rem"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#5a3010,#3a1a08)">Foto histórica</div></div>
+        </div>
+        <div class="reveal" style="transition-delay:.15s">
+          <span class="etiqueta">Nuestra historia</span>
+          <h2>Desde 2017, transformando comunidades con el arte</h2>
+          <p>La Fundación Arte y Cultura Viva nació del sueño de un grupo de artistas y gestores culturales bogotanos que creían firmemente en el poder del arte para transformar vidas. En 2017, con un primer taller de pintura en el barrio Kennedy para 25 niños, comenzó nuestra historia.</p>
+          <p>Hoy, después de ocho años de trabajo, hemos crecido hasta contar con 12 programas activos, cinco sedes en Bogotá y más de 500 beneficiarios directos al año. Somos una organización sin ánimo de lucro registrada en Colombia, con personería jurídica y certificación como entidad de utilidad común.</p>
+          <p>Nuestro trabajo ha sido reconocido por la Secretaría de Cultura de Bogotá, el Ministerio de Cultura y diversas organizaciones internacionales de cooperación al desarrollo cultural.</p>
+          <div class="mv-grid" style="margin-top:1.5rem">
+            <div class="mv-card"><h4>Misión</h4><p>Promover el acceso a la formación artística y cultural como herramienta de transformación social en comunidades vulnerables de Colombia.</p></div>
+            <div class="mv-card"><h4>Visión</h4><p>Ser la fundación cultural de referencia en Colombia, reconocida por su impacto social y la calidad de sus programas artísticos para 2030.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIFRAS -->
+  <section class="seccion seccion-naranja" style="position:relative;overflow:hidden">
+    <div class="deco-forma forma-blob-2 bg-deco-morado deco-ml-medium" aria-hidden="true" style="opacity:0.25; top: 10%"></div>
+    <div class="deco-forma forma-blob-1 bg-deco-rojo deco-br-tall" aria-hidden="true" style="opacity:0.2; transform:rotate(-45deg)"></div>
+    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.06;pointer-events:none" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <circle cx="150" cy="150" r="200" fill="none" stroke="#fff" stroke-width="2"/>
+      <circle cx="650" cy="150" r="200" fill="none" stroke="#fff" stroke-width="2"/>
+    </svg>
+    <div class="contenedor">
+      <div class="sec-encabezado" style="color:#fff">
+        <h2 style="color:#fff">Nuestro impacto en números</h2>
+        <p style="color:rgba(255,255,255,.75)">Ocho años de trabajo se miden en vidas transformadas, sueños cumplidos y comunidades fortalecidas.</p>
+      </div>
+      <div class="cifras-grid">
+        <div class="cifra-item reveal"><div class="cifra-num">+500</div><div class="cifra-label">Beneficiarios directos al año</div></div>
+        <div class="cifra-item reveal" style="transition-delay:.1s"><div class="cifra-num">12</div><div class="cifra-label">Programas culturales activos</div></div>
+        <div class="cifra-item reveal" style="transition-delay:.2s"><div class="cifra-num">8</div><div class="cifra-label">Años de trayectoria</div></div>
+        <div class="cifra-item reveal" style="transition-delay:.3s"><div class="cifra-num">+80</div><div class="cifra-label">Talleres realizados al año</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="seccion seccion-crema">
+    <div class="deco-forma forma-blob-1 bg-deco-verde deco-tl-small" aria-hidden="true" style="opacity:0.25; top:20px; left:-10px"></div>
+    <div class="deco-forma forma-pill bg-deco-naranja deco-tr-large" aria-hidden="true" style="opacity:0.15; top:40%; right:-200px"></div>
+    <div class="contenedor">
+      <div class="sec-encabezado reveal">
+        <span class="etiqueta">Nuestros valores</span>
+        <h2>Lo que nos guía y une</h2>
+        <p>Los principios que orientan cada decisión, programa y acción de nuestra fundación.</p>
+      </div>
+      <div class="valores-grid">
+        <div class="valor-card reveal">
+          <div class="valor-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" style="color:var(--naranja)"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></div>
+          <h3>Creatividad</h3>
+          <p>Creemos que la creatividad es una capacidad humana universal que debe ser cultivada y expresada libremente en todos los espacios de la vida.</p>
+        </div>
+        <div class="valor-card reveal" style="transition-delay:.1s">
+          <div class="valor-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" style="color:var(--amarillo)"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h3>Comunidad</h3>
+          <p>El arte tiene mayor impacto cuando se practica y disfruta colectivamente. Fortalecemos lazos comunitarios a través de la cultura compartida.</p>
+        </div>
+        <div class="valor-card reveal" style="transition-delay:.2s">
+          <div class="valor-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" style="color:var(--verde)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
+          <h3>Transformación social</h3>
+          <p>El arte es nuestra herramienta para incidir positivamente en la realidad social de las comunidades con las que trabajamos.</p>
+        </div>
+        <div class="valor-card reveal" style="transition-delay:.3s">
+          <div class="valor-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" style="color:var(--azul)"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg></div>
+          <h3>Inclusión</h3>
+          <p>Nuestros programas son gratuitos y abiertos a toda la comunidad, sin importar edad, condición socioeconómica o capacidad artística previa.</p>
+        </div>
+        <div class="valor-card reveal" style="transition-delay:.4s">
+          <div class="valor-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" style="color:var(--morado)"><path d="M4 22h16"></path><path d="M4 18h16"></path><path d="M5 18v-8"></path><path d="M9 18v-8"></path><path d="M15 18v-8"></path><path d="M19 18v-8"></path><path d="M12 2l10 8H2L12 2z"></path></svg></div>
+          <h3>Patrimonio cultural</h3>
+          <p>Valoramos y preservamos las expresiones artísticas y culturales colombianas como parte fundamental de nuestra identidad nacional.</p>
+        </div>
+        <div class="valor-card reveal" style="transition-delay:.5s">
+          <div class="valor-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" style="color:var(--rojo)"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.9 1.2 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg></div>
+          <h3>Innovación pedagógica</h3>
+          <p>Buscamos constantemente nuevos métodos y enfoques para hacer que el aprendizaje artístico sea más accesible, relevante y transformador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="seccion seccion-clara" id="equipo">
+    <div class="deco-forma forma-blob-2 bg-deco-rojo deco-mid-left" aria-hidden="true" style="opacity:0.15; left:-60px"></div>
+    <div class="deco-forma forma-blob-1 bg-deco-morado deco-bl-large" aria-hidden="true" style="opacity:0.1; bottom:-150px"></div>
+    <div class="contenedor">
+      <div class="sec-encabezado reveal">
+        <span class="etiqueta">Nuestro equipo</span>
+        <h2>Las personas detrás de la fundación</h2>
+        <p>Un equipo apasionado por el arte y comprometido con la transformación social de Colombia.</p>
+      </div>
+      <div class="equipo-grid">
+        <div class="persona-card reveal">
+          <div class="persona-foto img-ph" style="background:linear-gradient(135deg,#5a4030,#3a2010)">Foto</div>
+          <p class="persona-nombre">Laura Rodríguez</p>
+          <p class="persona-cargo">Directora ejecutiva</p>
+          <p class="persona-bio">Gestora cultural con 15 años de experiencia en proyectos de arte comunitario en Colombia y América Latina.</p>
+        </div>
+        <div class="persona-card reveal" style="transition-delay:.1s">
+          <div class="persona-foto img-ph" style="background:linear-gradient(135deg,#2a5010,#1a3008)">Foto</div>
+          <p class="persona-nombre">Carlos Mendoza</p>
+          <p class="persona-cargo">Coordinador de programas</p>
+          <p class="persona-bio">Licenciado en Artes de la Universidad Nacional. Dirige la red de talleres y la formación de nuestros instructores.</p>
+        </div>
+        <div class="persona-card reveal" style="transition-delay:.2s">
+          <div class="persona-foto img-ph" style="background:linear-gradient(135deg,#4a1060,#2a0840)">Foto</div>
+          <p class="persona-nombre">Ana Sofía Torres</p>
+          <p class="persona-cargo">Gestora cultural</p>
+          <p class="persona-bio">Especialista en gestión de proyectos culturales y cooperación internacional. Coordina nuestras alianzas estratégicas.</p>
+        </div>
+        <div class="persona-card reveal" style="transition-delay:.3s">
+          <div class="persona-foto img-ph" style="background:linear-gradient(135deg,#1a3060,#0a1840)">Foto</div>
+          <p class="persona-nombre">Diego Vargas</p>
+          <p class="persona-cargo">Comunicaciones</p>
+          <p class="persona-bio">Periodista cultural y especialista en estrategia digital. Cuenta las historias de impacto de nuestra comunidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIADOS -->
+  <section class="seccion seccion-crema">
+    <div class="contenedor">
+      <div class="sec-encabezado reveal">
+        <span class="etiqueta">Aliados y financiadores</span>
+        <h2>Quienes nos apoyan</h2>
+        <p>Empresas, instituciones públicas y organismos de cooperación que creen en nuestra misión.</p>
+      </div>
+      <div class="aliados-grid">
+        <div class="aliado-logo reveal">Logo aliado 1</div>
+        <div class="aliado-logo reveal" style="transition-delay:.1s">Logo aliado 2</div>
+        <div class="aliado-logo reveal" style="transition-delay:.2s">Logo aliado 3</div>
+        <div class="aliado-logo reveal" style="transition-delay:.3s">Logo aliado 4</div>
+        <div class="aliado-logo reveal" style="transition-delay:.4s">Logo aliado 5</div>
+      </div>
+      <div style="text-align:center;margin-top:3rem">
+        <p style="max-width:580px;margin:0 auto 1.5rem">¿Tu empresa quiere apoyar la cultura colombiana? Conoce nuestros planes de alianza corporativa y responsabilidad social empresarial.</p>
+        <a href="contacto.html" class="btn btn-primario">Ser aliado estratégico</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="../js/nav-footer.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/accesibilidad.js"></script>
+</body>
+</html>
