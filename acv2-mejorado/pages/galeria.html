@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    if (localStorage.getItem('tema_acv') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería — Fundación Arte y Cultura Viva</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link rel="stylesheet" href="../css/accesibilidad.css"/>
+  <style>
+    .gal-filtros{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem}
+    .gal-f-btn{padding:.45rem 1.1rem;border-radius:30px;border:2px solid var(--arena-300);background:transparent;font-size:.85rem;font-weight:700;color:var(--cafe);cursor:pointer;transition:all .2s;font-family:var(--fuente-cuerpo)}
+    .gal-f-btn:hover,.gal-f-btn.activo{border-color:var(--naranja);background:var(--naranja-pale);color:var(--naranja)}
+    .mosaico{columns:4;gap:10px;margin-bottom:2rem}
+    .mosaico-item{break-inside:avoid;margin-bottom:10px;border-radius:var(--r-md);overflow:hidden;cursor:pointer;position:relative}
+    .mosaico-item:hover .gal-overlay{opacity:1}
+    .mosaico-item .gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(61,43,31,.65),transparent 55%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:.8rem}
+    .mosaico-item .gal-overlay span{color:#fff;font-size:.8rem;font-weight:700}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .video-thumb{aspect-ratio:16/9;border-radius:var(--r-lg);overflow:hidden;position:relative;cursor:pointer}
+    .video-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+    .video-play-btn{width:56px;height:56px;background:rgba(232,114,12,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .video-thumb:hover .video-play-btn{transform:scale(1.12)}
+    @media(max-width:768px){.mosaico{columns:2}.video-grid{grid-template-columns:1fr}}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://ejemplo.com/img/og-image.jpg" />
+  <meta property="og:url" content="https://ejemplo.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<main id="contenido-principal">
+  <section class="pagina-hero">
+    <div class="contenedor">
+      <span class="etiqueta">Nuestra galería</span>
+      <h1>Momentos que nos inspiran</h1>
+      <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </div>
+  </section>
+
+  <!-- GALERÍA ANIMADA (igual que home) -->
+  <section class="seccion seccion-oscura">
+    <div class="contenedor">
+      <div class="sec-encabezado">
+        <span class="etiqueta etiqueta-blanca">Galería en movimiento</span>
+        <h2 style="color:#fff">Arte en todas sus formas</h2>
+      </div>
+      <div class="galeria-columnas-wrap">
+        <div class="galeria-deco-lat izq" aria-hidden="true">
+          <span style="background:#E8720C"></span><span style="background:#E8C020"></span>
+          <span style="background:#6AAF20"></span><span style="background:#2A6DB5"></span>
+          <span style="background:#7B3FA0"></span><span style="background:#D13B2A"></span>
+        </div>
+        <div class="galeria-deco-lat der" aria-hidden="true">
+          <span style="background:#E8720C"></span><span style="background:#E8C020"></span>
+          <span style="background:#6AAF20"></span><span style="background:#2A6DB5"></span>
+          <span style="background:#7B3FA0"></span><span style="background:#D13B2A"></span>
+        </div>
+        <div class="galeria-fade-top"></div>
+        <div class="galeria-fade-bot"></div>
+        <div class="galeria-columnas">
+          <div class="gal-col sube">
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#4a2e1a">Danza</div><div class="gal-overlay"><span>Taller de danza 2024</span></div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#4a1a1a">Música</div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#1a1a4a">Teatro</div><div class="gal-overlay"><span>Presentación teatral</span></div></div>
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#4a2e1a">Danza</div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#4a1a1a">Música</div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#1a1a4a">Teatro</div></div>
+          </div>
+          <div class="gal-col baja lento">
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#1a2e4a">Artes</div></div>
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#2e4a1a">Comunidad</div><div class="gal-overlay"><span>Festival Arte Viva</span></div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#1a4a2e">Taller</div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#1a2e4a">Artes</div></div>
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#2e4a1a">Comunidad</div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#1a4a2e">Taller</div></div>
+          </div>
+          <div class="gal-col sube lento">
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#2e1a4a">Música</div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#4a2e2e">Expo</div><div class="gal-overlay"><span>Muestra colectiva</span></div></div>
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#4a1a1a">Danza</div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#2e1a4a">Música</div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#4a2e2e">Expo</div></div>
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#4a1a1a">Danza</div></div>
+          </div>
+          <div class="gal-col baja">
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#1a4a2e">Concierto</div><div class="gal-overlay"><span>Concierto en el parque</span></div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#1a2e4a">Niños</div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#2e4a1a">Urbano</div></div>
+            <div class="gal-item tall"><div class="img-ph" style="height:200px;background:#1a4a2e">Concierto</div></div>
+            <div class="gal-item medium"><div class="img-ph" style="height:155px;background:#1a2e4a">Niños</div></div>
+            <div class="gal-item short"><div class="img-ph" style="height:115px;background:#2e4a1a">Urbano</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOSAICO FOTOS -->
+  <section class="seccion seccion-crema">
+    <div class="deco-forma forma-blob-1 bg-deco-morado deco-ml-medium" aria-hidden="true" style="opacity:0.25; top:5%"></div>
+    <div class="deco-forma forma-blob-2 bg-deco-rojo deco-tr-large" aria-hidden="true" style="opacity:0.18; right:-200px"></div>
+    <div class="contenedor">
+      <div class="sec-encabezado reveal">
+        <span class="etiqueta">Fotografías</span>
+        <h2>Álbum de la fundación</h2>
+      </div>
+      <div class="gal-filtros">
+        <button class="gal-f-btn activo" data-filtro="todas">Todas</button>
+        <button class="gal-f-btn" data-filtro="danza">Danza</button>
+        <button class="gal-f-btn" data-filtro="musica">Música</button>
+        <button class="gal-f-btn" data-filtro="teatro">Teatro</button>
+        <button class="gal-f-btn" data-filtro="eventos">Eventos</button>
+        <button class="gal-f-btn" data-filtro="comunidad">Comunidad</button>
+      </div>
+      <div class="mosaico">
+        <div class="mosaico-item" data-categoria="danza"><div class="img-ph" style="height:220px;background:#4a2e1a">Danza</div><div class="gal-overlay"><span>Taller de danza folclórica</span></div></div>
+        <div class="mosaico-item" data-categoria="musica"><div class="img-ph" style="height:160px;background:#2a5010">Música</div><div class="gal-overlay"><span>Escuela de música</span></div></div>
+        <div class="mosaico-item" data-categoria="teatro"><div class="img-ph" style="height:200px;background:#1a3060">Teatro</div><div class="gal-overlay"><span>Taller de teatro</span></div></div>
+        <div class="mosaico-item" data-categoria="teatro"><div class="img-ph" style="height:180px;background:#4a1060">Arte visual</div><div class="gal-overlay"><span>Exposición colectiva</span></div></div>
+        <div class="mosaico-item" data-categoria="eventos"><div class="img-ph" style="height:240px;background:#6a1a10">Evento</div><div class="gal-overlay"><span>Festival Arte Viva 2024</span></div></div>
+        <div class="mosaico-item" data-categoria="comunidad"><div class="img-ph" style="height:170px;background:#3a5a10">Comunidad</div><div class="gal-overlay"><span>Mural comunitario</span></div></div>
+        <div class="mosaico-item" data-categoria="musica"><div class="img-ph" style="height:190px;background:#2e1a4a">Música 2</div><div class="gal-overlay"><span>Concierto en el parque</span></div></div>
+        <div class="mosaico-item" data-categoria="comunidad"><div class="img-ph" style="height:150px;background:#1a4a2e">Taller</div><div class="gal-overlay"><span>Taller infantil de arte</span></div></div>
+        <div class="mosaico-item" data-categoria="danza"><div class="img-ph" style="height:210px;background:#4a2e1a">Danza 2</div><div class="gal-overlay"><span>Gala de danza contemporánea</span></div></div>
+        <div class="mosaico-item" data-categoria="teatro"><div class="img-ph" style="height:175px;background:#5a3010">Arte 2</div><div class="gal-overlay"><span>Muestra estudiantil</span></div></div>
+        <div class="mosaico-item" data-categoria="comunidad"><div class="img-ph" style="height:195px;background:#1a2e4a">Niños</div><div class="gal-overlay"><span>Programa infantil</span></div></div>
+        <div class="mosaico-item" data-categoria="eventos"><div class="img-ph" style="height:165px;background:#2e4a1a">Arte urbano</div><div class="gal-overlay"><span>Arte urbano comunitario</span></div></div>
+      </div>
+      <div style="text-align:center">
+        <button class="btn btn-contorno">Cargar más fotos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="seccion seccion-clara">
+    <div class="deco-forma forma-pill bg-deco-naranja deco-bl-large" aria-hidden="true" style="opacity:0.25; bottom:-100px; left:-50px"></div>
+    <div class="contenedor">
+      <div class="sec-encabezado reveal">
+        <span class="etiqueta">Videos</span>
+        <h2>Nuestra historia en movimiento</h2>
+      </div>
+      <div class="video-grid">
+        <div class="video-thumb reveal"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#4a2e1a,#2a1008)">Video 1</div><div class="video-play"><div class="video-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div></div>
+        <div class="video-thumb reveal" style="transition-delay:.1s"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#2a5010,#1a3008)">Video 2</div><div class="video-play"><div class="video-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div></div>
+        <div class="video-thumb reveal" style="transition-delay:.2s"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#4a1060,#2a0840)">Video 3</div><div class="video-play"><div class="video-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="../js/nav-footer.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/accesibilidad.js"></script>
+<script>
+document.querySelectorAll('.gal-f-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.gal-f-btn').forEach(function(x){x.classList.remove('activo')});
+    b.classList.add('activo');
+    var filtro = b.getAttribute('data-filtro');
+    document.querySelectorAll('.mosaico-item').forEach(function(item){
+      if(filtro === 'todas' || item.getAttribute('data-categoria') === filtro) {
+        item.style.display = '';
+        setTimeout(function(){ item.style.opacity = '1'; }, 50);
+      } else {
+        item.style.display = 'none';
+        item.style.opacity = '0';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
